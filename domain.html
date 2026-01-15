@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Domain | SoloCloud</title>
+	<link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+	<!-- SEO -->
+	<meta property="og:site_name" content="">
+	<meta property="og:title" content="">
+	<meta name="twitter:card" content="summary">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="">
+	<meta name="description" content="">
+	<meta property="og:url" content="https://localhost/">
+	<meta property="og:image" content="">
+	<meta name="twitter:card" content="summary_large_image">
+	<link rel="apple-touch-icon" sizes="180x180" href="minecraft.html">
+	<link rel="icon" type="image/png" sizes="32x32" href="../index.html">
+	<link rel="icon" type="image/png" sizes="16x16" href="minecraft.html">
+	<link rel="manifest" href="minecraft.html">
+	<link rel="mask-icon" href="minecraft.html" color="#000000">
+	<link rel="shortcut icon" href="minecraft.html">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-config" content=""> 
+	<!-- End SEO -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@0ac23ca/css/all.css" rel="stylesheet" type="text/css" />
+	<!-- OWL Slider v2.3.4 -->
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css">
+    <!-- Poppins -->
+	<link href="assets/css/fonts.css" rel="stylesheet"> 
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+</head>
+<body>
+		<!-- PRELOADER: place this right after <body> -->
+<div id="preloader" aria-hidden="true">
+  <div class="spinner" role="status" aria-label="Loading"></div>
+</div>
+<!-- END PRELOADER -->
+ <style>
+/* Preloader */
+#preloader {
+  position: fixed;
+  inset: 0;                      /* top:0; right:0; bottom:0; left:0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #131622;           /* page background while loading */
+  z-index: 99999;
+  transition: opacity .45s ease, visibility .45s ease;
+}
+
+/* hidden state: fades out */
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.spinner {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  border: 8px solid #181d33;    /* no static circle */
+  border-top-color: #0195f4;       /* only the blue arc */
+  animation: preloader-spin 1s linear infinite;
+}
+
+/* remove inner glow completely */
+.spinner::after {
+  content: none; 
+}
+
+
+@keyframes preloader-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation: none; transform: rotate(0deg); }
+}
+.menu-icon {
+    width: 30px;      /* ideal for dropdowns */
+    height: 30px;
+    margin-right: 5px;
+}
+.nav-icon {
+    width: 20px;      /* ideal for dropdowns */
+    height: 20px;
+    margin-right: 5px;
+}
+.plan-icon {
+    width: 30px;   /* adjust size */
+    height: 30px;
+    margin-right: 6px;
+}
+
+/* Remove Bootstrap white layer */
+.modal-content {
+    background: #181d33 !important;
+    border: none;
+}
+/* Continue button – white boxed, no hover change */
+.btn-discord {
+    color: #fff;
+    background: #5601f4;
+}
+/* Continue button – white boxed, no hover change */
+.btn-billing {
+    color: #fff;
+    background: #0195f4;
+}
+/* Add breathing space at bottom of modal */
+#orderCard .card-body {
+    padding: 1.2rem 2rem 1rem; /* top | left-right | bottom */
+}
+#orderCard ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+#orderCard ul li {
+    list-style: none;
+    margin-bottom: 0.6rem;
+}
+
+
+
+</style>
+<script>
+  // Wait for full page load, then fade out preloader
+  window.addEventListener('load', function () {
+    var pre = document.getElementById('preloader');
+    if (!pre) return;
+    // add hidden class to fade
+    pre.classList.add('hidden');
+    // remove from DOM after fade completes to avoid covering interactive elements
+    setTimeout(function () {
+      if (pre && pre.parentNode) pre.parentNode.removeChild(pre);
+    }, 600); // match/greater than CSS transition duration
+  });
+
+  // Optional: if you want to hide preloader after X seconds even if load hangs:
+  setTimeout(function () {
+    var pre = document.getElementById('preloader');
+    if (pre) {
+      pre.classList.add('hidden');
+      setTimeout(function(){ if (pre.parentNode) pre.parentNode.removeChild(pre); }, 600);
+    }
+  }, 8000); // 8 seconds fallback
+</script>
+
+	
+	<!-- Navbar -->
+	<!-- Navigation -->
+<nav id="navbar_top" class="navbar navbar-dark navbar-expand-lg fixed-top">
+		<div class="container-fluid container-custom">
+		<a class="navbar-brand" href="index.html">
+			<img class="img-fluid" src="assets/images/logo.svg" alt="SoloCloud Logo">
+			SoloCloud<span></span>
+		</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dinoNavbar" aria-controls="dinoNavbar" aria-expanded="false" aria-label="Toggle navigation">
+	      	<span class="navbar-toggler-icon"></span>
+	    </button>
+		<div class="collapse navbar-collapse" id="dinoNavbar">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+        <a class="nav-link d-flex align-items-center" href="minecraft.html">
+            <img src="assets/images/minecraftserver.webp" class="nav-icon" alt="Minecraft">
+            <span>Minecraft Hosting</span>
+        </a>
+    </li>
+
+		        </li>
+		        <li class="nav-item dropdown">
+		          	<a class="nav-link dropdown-toggle" href="index.html#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            	Services
+		          	</a>
+<ul class="dropdown-menu dropdown-menu-end">
+    <li>
+<a class="dropdown-item d-flex align-items-center" href="minecraft.html">
+    <img src="assets/images/minecraftserver.webp" class="menu-icon">
+    <span> Minecraft Hosting</span>
+</a>
+
+
+    <li>
+<a class="dropdown-item d-flex align-items-center" href="proxy.html">
+    <img src="assets/images/velocity.webp" class="menu-icon">
+    <span> Proxy Server</span>
+</a>
+    </li>
+
+    <li>
+<a class="dropdown-item d-flex align-items-center" href="domain.html">
+    <img src="assets/images/domains.png" class="menu-icon">
+    <span> Domains</span>
+</a>
+    </li>
+</ul>
+
+						        <li class="nav-item dropdown">
+		          	<a class="nav-link dropdown-toggle" href="index.html#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            	Company
+		          	</a>
+		          	<ul class="dropdown-menu dropdown-menu-end">
+		            	    <li>
+<a class="dropdown-item d-flex align-items-center" href="aboutus.html">
+    <img src="assets/images/aboutus.png" class="menu-icon">
+    <span> about us</span>
+</a>
+    </li>
+		            	    <li>
+<a class="dropdown-item d-flex align-items-center" href="partners.html">
+    <img src="assets/images/partners.png" class="menu-icon">
+    <span> Partners</span>
+</a>
+<li>
+<a class="dropdown-item d-flex align-items-center" href="payment.html">
+    <img src="assets/images/payment.png" class="menu-icon">
+    <span> Payment</span>
+</a>
+    </li>
+		          	</ul>
+		        </li>
+						        <li class="nav-item">
+		          	<a class="nav-link" href="legal.html">Legal</a>
+		        </li>
+		        <li class="nav-item">
+					<div class="dropdown text-center">
+						<a class="btn dropdown-toggle" id="panel" data-bs-toggle="dropdown" aria-expanded="false">
+							Login / SignUp
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end dropdown-menu-panel" aria-labelledby="panel">
+							<a class="dropdown-item" href="https://billing.solocloud.host">									
+								Client Area <span class="d-block">Billing &amp; Support</span>
+							</a>
+<a class="dropdown-item" href="https://panel.solocloud.host" target="_blank">
+    Game Panel <span class="d-block">Server Management</span>
+</a>
+							</a>	
+<a class="dropdown-item" href="https://discord.gg/solocloud" target="_blank">
+    Discord <span class="d-block">Join Our Discord</span>
+</a>
+						</ul>
+					</div>
+				</li>
+		    </ul>
+		</div>
+	</div>
+</nav>
+	<div class="header minecraft-h">
+		<div class="container-fluid container-custom">
+<h2>Get Your Domain Name</h2>
+<ul>
+  <li>Yearly Domain Registration</li>
+  <li>Fully Managed Domains</li>
+  <li>Fast Delivery</li>
+</ul>
+
+		</div>
+	</div>
+
+<div class="plans py-5">
+    <div class="container-fluid container-custom text-center">
+        <!-- Centered Heading -->
+        <h2 class="mb-4" style="color: white; font-weight: 600;">SELECT DOMAIN TYPE :-</h2> 
+		<p>Note: Prices Are Not Listed, Because Of Regular Changes In Prices.</p> 
+
+        <ul id="swicherPlans" class="btn-swicher text-center nav nav-pills d-flex justify-content-center mb-5" data-bs-tabs="tabs">
+            <li class="nav-item">
+                <a href="minecraft.html#gamingdomain" class="nav-link show active" data-bs-toggle="tab">
+                    <img src="assets/images/gamingdomain.webp" alt="Gaming Domain" class="plan-icon"> Gaming 
+                </a>
+            </li>
+			            <li class="nav-item">
+                <a href="minecraft.html#businessdomain" class="nav-link" data-bs-toggle="tab">
+					<img src="assets/images/businessdomain.png" alt="Business Domain" class="plan-icon"> Business 
+                </a>
+            </li>
+			
+			
+
+            </ul>
+            <div class="tab-content">
+            	<!-- gaming domain Plans -->
+            	<div id="gamingdomain" class="tab-pane active">
+            		<div class="row">
+            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.fun</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.xyz</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.pro</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.net</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.gg</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						
+
+
+            		</div>
+            	</div>
+				<!-- gaming domain Plans -->
+            	<div id="businessdomain" class="tab-pane">
+            		<div class="row">
+            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.com</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.net</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.store</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.shop</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.cloud</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.site</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.tech</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.host</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.online</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+						            			<div class="col-lg-4 col-md-4">
+            				<div class="card mc-card mb-4 text-center">
+            					<div class="card-header py-4">
+            						<h2 class="mb-0">.in</h2>
+            					</div>
+            					<div class="card-price py-2">
+            					</div>
+            					<div class="card-body">
+                               <ul class="list-unstyled">
+                            <li><i class="fad fa-clock"></i> 1 Year Validity</li>
+                            <li><i class="fad fa-cogs"></i> Fully Managed</li>
+                            <li><i class="fad fa-network-wired"></i> Free DNS Management</li>
+                            <li><i class="fad fa-bolt"></i> Fast Activation</li>
+                        </ul>
+            						<div class="mt-4">
+            							<a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#orderCard">Order Now</a>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+
+
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="py-5">
+	<div class="container-fluid container-custom">
+		<div class="row">
+			<div class="col-lg-9">
+				<div class="row">
+					<div class="col-lg-4">
+						<h4>Services</h4>
+						<ul>
+							<li><a href="minecraft.html">Minecraft Hosting</a></li>
+							<li><a href="proxy.html">Proxy Server</a></li>
+							<li><a href="domain.html">Domains</a></li>					</ul>
+					</div>
+					<div class="col-lg-4">
+						<h4>Company</h4>
+						<ul>
+							<li><a href="aboutus.html">About us</a></li>
+							<li><a href="partners.html">Partners</a></li>
+							<li><a href="payment.html">Payment</li>
+						</ul>
+					</div>
+										<div class="col-lg-4">
+						<h4>Login / SignUp</h4>
+						<ul>
+<li>
+    <a href="https://billing.solocloud.host" target="_blank" rel="noopener noreferrer">
+        Client Area
+    </a>
+</li>
+<li>
+    <a href="https://panel.solocloud.host" target="_blank" rel="noopener noreferrer">
+        Game panel
+    </a>
+</li>
+
+<li>
+    <a href="https://discord.gg/solocloud" target="_blank" rel="noopener noreferrer">
+        Discord
+    </a>
+</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<h3>
+					<img class="img-fluid" src="assets/images/logo.svg" alt="SoloCloud Footer Logo">
+					SoloCloud
+				</h3>
+				<p>SoloCloud - You Dream We Host!</p>
+				<p class="copy">&copy; Copyright 2026 SoloCloud. All Rights Reserved</p>
+			</div>
+		</div>	
+	</div>
+	<!-- Reusable Order Card -->
+<div class="modal fade" id="orderCard" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content mc-card text-center">
+
+            <div class="card-header py-2">
+                <h2 class="mb-0">Order Details</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+  <li>To purchase a domain, click any button below.</li>
+  <li>Discord is recommended for faster replies and quicker order processing.
+Billing support works normally and is ideal if you don’t use Discord.</li>
+<li>Create a ticket, share your domain details, complete payment, and we’ll handle the rest. </li>
+</ul>
+
+                <div class="mt-4 d-flex justify-content-center gap-2">
+	<a href="https://discord.gg/f3TmunahKq" class="btn btn-discord">Create Ticket On Discord ↗</a>
+<a href="https://billing.solocloud.host/tickets/create" class="btn btn-billing">Create Ticket On Billing ↗</a>
+</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</footer>
+	<!-- Jquery v3.6.1 -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap v5.2.1 -->
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- OWL Slider v2.3.4 -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+	<script>
+		// Reviews //
+    	jQuery("#servertypes").owlCarousel({autoplay:!0,rewind:!0,margin:20,mouseDrag:!0,nav:!1,dots:!1,lazyLoad:!0,responsive:{0:{items:1},576:{items:2},768:{items:2},1024:{items:3},1366:{items:4}}});
+		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+	</script>
+	<script src="assets/js/custom.js"></script>
+</body>
+</html>
