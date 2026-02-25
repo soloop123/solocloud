@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Domains | SoloCloud</title>
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@0ac23ca/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #9d50bb;
+            --bg-dark: #0a0b10;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container-custom {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        /* Navbar */
+        #navbar_top {
+            background: rgba(10, 11, 16, 0.8) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .navbar-brand span { color: var(--primary); }
+
+        .dropdown-menu {
+            background: #131622;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        .dropdown-item { color: #fff; padding: 10px 20px; transition: 0.3s; }
+        .dropdown-item:hover { background: var(--glass); color: var(--primary); }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, rgba(157, 80, 187, 0.08) 0%, transparent 50%);
+        }
+
+        .hero_content h2 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-main {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            color: white !important;
+            padding: 12px 35px;
+            font-weight: 700;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+            transition: 0.4s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 35px rgba(0, 210, 255, 0.6);
+        }
+
+        /* Domain Cards */
+        .domain-box {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 40px 30px;
+            border-radius: 20px;
+            transition: 0.4s;
+            text-align: center;
+            height: 100%;
+        }
+        .domain-box:hover {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-10px);
+        }
+        .domain-box h2 { color: var(--primary); font-size: 2.2rem; margin: 15px 0; font-weight: 800; }
+        .domain-box p { color: #888; font-size: 0.9rem; min-height: 45px; }
+        
+        .domain-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .domain-features li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #ccc;
+            display: flex;
+            align-items: center;
+        }
+        .domain-features i { color: var(--primary); margin-right: 10px; font-size: 0.85rem; }
+
+        footer {
+            border-top: 1px solid var(--border);
+            background: #050608;
+            padding: 60px 0 30px;
+        }
+        footer h4 { color: var(--primary); font-weight: 700; margin-bottom: 20px; }
+        footer ul li a { color: #888; text-decoration: none; transition: 0.3s; }
+        footer ul li a:hover { color: var(--primary); padding-left: 5px; }
+    </style>
+</head>
+<body>
+
+<nav id="navbar_top" class="navbar navbar-dark navbar-expand-lg fixed-top">
+    <div class="container container-custom">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo.svg" alt="SoloCloud" style="width: 35px; margin-right: 8px;">
+            Solo<span>Cloud</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dinoNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="dinoNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="https://billing.solocloud.host/products/minecraft_hosting">
+                        <img src="assets/images/minecraftserver.webp" style="width:18px; margin-right:8px;">
+                        <span>Minecraft Hosting</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Hosting
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDrop">
+                        <li><a class="dropdown-item" href="https://billing.solocloud.host/products/hytale-server-hosting-cheapest-plans"><img src="assets/images/hytalehosting.png" width="18"> Hytale Server</a></li>
+                        <li><a class="dropdown-item" href="https://billing.solocloud.host/products/minecraft_hosting"><img src="assets/images/minecraftserver.webp" width="18"> Minecraft Server</a></li>
+                        <li><a class="dropdown-item" href="https://billing.solocloud.host/products/proxy-server"><img src="assets/images/velocity.webp" width="18"> Proxy Server</a></li>
+                        <li><a class="dropdown-item" href="domain.html"><img src="assets/images/domains.png" width="18"> Domains</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="companyDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Company
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="companyDrop">
+                        <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+                        <li><a class="dropdown-item" href="partners.html">Partners</a></li>
+                        <li><a class="dropdown-item" href="payment.html">Payment</a></li>
+						<li><a class="dropdown-item" href="https://tutorials.solocloud.host/">Tutorials</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="legal.html">Legal</a></li>
+                
+                <li class="nav-item ms-lg-3 dropdown">
+                    <a class="btn-main dropdown-toggle" href="#" id="loginDrop" data-bs-toggle="dropdown">
+                        Login / SignUp
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="https://billing.solocloud.host">Client Area</a></li>
+                        <li><a class="dropdown-item" href="https://panel.solocloud.host">Game Panel</a></li>
+                        <li><a class="dropdown-item" href="https://discord.solocloud.host/">Discord</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="container container-custom">
+        <div class="hero_content">
+            <h2>SECURE YOUR <br><span style="color: var(--primary);">DOMAIN NAME</span></h2>
+            <p>Get the perfect identity for your gaming community or business.</p>
+            <a href="#extensions" class="btn-main">Browse Extensions</a>
+        </div>
+    </div>
+</div>
+
+<div id="extensions" class="py-5">
+    <div class="container container-custom">
+        <div class="text-center mb-5">
+            <h4 style="font-weight: 800; font-size: 2rem;">Available Extensions:</h4>
+            <p style="color: #888;">Note: Prices Are Not Listed, Because Of Regular Changes In Prices.</p>
+        </div>
+        
+		
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="domain-box">
+                    <h2>.FUN</h2>
+                    <p>The Ultimate Gaming Extension</p>
+                    <ul class="domain-features">
+                        <li><i class="fas fa-check-circle"></i> 1 Year Validity</li>
+                        <li><i class="fas fa-check-circle"></i> Fully Managed</li>
+                        <li><i class="fas fa-check-circle"></i> Free DNS Management</li>
+                        <li><i class="fas fa-check-circle"></i> Fast Activation</li>
+                    </ul>
+                    <a href="https://discord.gg/f3TmunahKq" class="btn-main w-100">Order Via Ticket</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="domain-box">
+                    <h2>.COM</h2>
+                    <p>Standard Business Choice</p>
+                    <ul class="domain-features">
+                        <li><i class="fas fa-check-circle"></i> 1 Year Validity</li>
+                        <li><i class="fas fa-check-circle"></i> Fully Managed</li>
+                        <li><i class="fas fa-check-circle"></i> Free DNS Management</li>
+                        <li><i class="fas fa-check-circle"></i> Fast Activation</li>
+                    </ul>
+                    <a href="https://discord.gg/f3TmunahKq" class="btn-main w-100">Order Via Ticket</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="domain-box">
+                    <h2>.XYZ</h2>
+                    <p>Modern & Versatile</p>
+                    <ul class="domain-features">
+                        <li><i class="fas fa-check-circle"></i> 1 Year Validity</li>
+                        <li><i class="fas fa-check-circle"></i> Fully Managed</li>
+                        <li><i class="fas fa-check-circle"></i> Free DNS Management</li>
+                        <li><i class="fas fa-check-circle"></i> Fast Activation</li>
+                    </ul>
+                    <a href="https://discord.gg/f3TmunahKq" class="btn-main w-100">Order Via Ticket</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="domain-box">
+                    <h2>.NET</h2>
+                    <p>The Network Professional Choice</p>
+                    <ul class="domain-features">
+                        <li><i class="fas fa-check-circle"></i> 1 Year Validity</li>
+                        <li><i class="fas fa-check-circle"></i> Fully Managed</li>
+                        <li><i class="fas fa-check-circle"></i> Free DNS Management</li>
+                        <li><i class="fas fa-check-circle"></i> Fast Activation</li>
+                    </ul>
+                    <a href="https://discord.gg/f3TmunahKq" class="btn-main w-100">Order Via Ticket</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="domain-box">
+                    <h2>.ORG</h2>
+                    <p>Best for Communities & Organizations</p>
+                    <ul class="domain-features">
+                        <li><i class="fas fa-check-circle"></i> 1 Year Validity</li>
+                        <li><i class="fas fa-check-circle"></i> Fully Managed</li>
+                        <li><i class="fas fa-check-circle"></i> Free DNS Management</li>
+                        <li><i class="fas fa-check-circle"></i> Fast Activation</li>
+                    </ul>
+                    <a href="https://discord.gg/f3TmunahKq" class="btn-main w-100">Order Via Ticket</a>
+                </div>
+            </div>
+
+			<div class="col-md-4">
+                <div class="domain-box">
+                    <h2>.STORE</h2>
+                    <p>Perfect for E-commerce Stores</p>
+                    <ul class="domain-features">
+                        <li><i class="fas fa-check-circle"></i> 1 Year Validity</li>
+                        <li><i class="fas fa-check-circle"></i> Fully Managed</li>
+                        <li><i class="fas fa-check-circle"></i> Free DNS Management</li>
+                        <li><i class="fas fa-check-circle"></i> Fast Activation</li>
+                    </ul>
+                    <a href="https://discord.gg/f3TmunahKq" class="btn-main w-100">Order Via Ticket</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="domain-box">
+                    <h2>.SHOP</h2>
+                    <p>Perfect for E-commerce Stores</p>
+                    <ul class="domain-features">
+                        <li><i class="fas fa-check-circle"></i> 1 Year Validity</li>
+                        <li><i class="fas fa-check-circle"></i> Fully Managed</li>
+                        <li><i class="fas fa-check-circle"></i> Free DNS Management</li>
+                        <li><i class="fas fa-check-circle"></i> Fast Activation</li>
+                    </ul>
+                    <a href="https://discord.gg/f3TmunahKq" class="btn-main w-100">Order Via Ticket</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container container-custom">
+        <div class="row">
+            <div class="col-lg-3 mb-4">
+                <h3 class="fw-bold"><img src="assets/images/logo.svg" width="30"> SoloCloud</h3>
+                <p class="mt-3">SoloCloud - You Dream We Host!</p>
+                <p class="text-muted small">&copy; 2026 SoloCloud. All Rights Reserved</p>
+            </div>
+            <div class="col-lg-3 col-6 mb-4">
+                <h4>Services</h4>
+                <ul class="list-unstyled">
+                    <li><a href="https://billing.solocloud.host/products/minecraft_hosting">Minecraft Hosting</a></li>
+                    <li><a href="https://billing.solocloud.host/products/proxy-server">Proxy Server</a></li>
+                    <li><a href="domain.html">Domains</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-6 mb-4">
+                <h4>Company</h4>
+                <ul class="list-unstyled">
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h4>Support</h4>
+                <ul class="list-unstyled">
+                    <li><a href="https://billing.solocloud.host">Client Area</a></li>
+                    <li><a href="https://panel.solocloud.host">Game panel</a></li>
+                    <li><a href="https://discord.gg/solocloud">Discord Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
